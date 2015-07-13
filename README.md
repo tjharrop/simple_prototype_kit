@@ -32,7 +32,7 @@ There are 2 options here. You can either open index.html in Safari or Firefox di
 
 #### Using Chrome (recommended)
 
-_You may see an unauthorised developer warning message. If you do, open System Preferences, click the Security icon and look for the "Allow" button_
+_You may see an unauthorised developer warning message. If you do, cmd + click and click "open" instead (thanks Joe)_
 
 1. Double click run.command (see above if you get a warning)
 2. In chrome, go to http://localhost:1987/index.html
