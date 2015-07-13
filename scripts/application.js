@@ -1,5 +1,6 @@
 function unWrapPlaceholder(){
   $(this).contents().unwrap();
+  $("#proposition-name").load("service-name.txt");
 }
 
 $( document ).ready(function() {
@@ -44,5 +45,7 @@ $( document ).ready(function() {
     localStorage.clear();
     $(this).html('&#10003; Data cleared');
   });
+
+
 
 });
