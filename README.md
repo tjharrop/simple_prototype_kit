@@ -1,5 +1,7 @@
-# Static Government Digital Prototype kit
+# Unofficial Static Government Digital Prototype kit
 Simple prototyping kit for GOV.UK service designers. This kit does not contain all of the functionality of the express kit, however, you will not need node.js or git experience, and you will not need to run anything in command line.
+
+Created internally at Home Office Digital - not supported, not created by GDS, supplied as-is
 
 This is not finished! It's Alpha Alpha!
 
