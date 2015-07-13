@@ -4,7 +4,7 @@ function unWrapPlaceholder(){
 
 $( document ).ready(function() {
   $('[data-includefile]').each(function(){
-    var file = $(this).attr("data-includefile")
+    var file = $(this).attr("data-includefile");
     $(this).load("includes/"+$(this).attr("data-includefile")+".html", unWrapPlaceholder)
   });
 
@@ -30,6 +30,19 @@ $( document ).ready(function() {
         $(this).toggle($this.val() == $(this).attr('data-toggle-value'));
       });
     }
+  });
+
+  $('[data-button-page]').change(function(){
+    var buttonid = $(this).attr("data-button-id");
+    var url = $(this).attr("data-button-page");
+    if ($(this).is(':checked')) {
+      $(buttonid).attr("href", url);
+    }
+  });
+
+  $('.clearStorage').click(function(){
+    localStorage.clear();
+    $(this).html('&#10003; Data cleared');
   });
 
 });
