@@ -18,6 +18,7 @@
 	<link href="govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
 
 	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/form.storage.js"></script>
 	<script type="text/javascript" src="scripts/application.js"></script>
 </head>
 <body>
@@ -31,30 +32,12 @@
 <h1 class="heading-xlarge">Typography</h1>
 
 <div class="text">
-	<h1 class="heading-xlarge"><span class="heading-secondary">A 27px section
-	heading</span> A 48px heading</h1>
-
-	<p class="lede">This is an intro paragraph at 24px. Maecenas faucibus mollis
-	interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-	Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur
-	blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper.</p>
-
+	<h1 class="heading-xlarge">
+		A 48px heading
+		<span class="heading-secondary">A 27px section heading</span>
+	</h1>
 	<h2 class="heading-large">A 36px heading</h2>
-
-	<p>This is a body copy paragraph at 19px. Donec id elit non mi porta gravida at eget
-	metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-	ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-	lacinia odio sem nec elit. Donec sed odio dui. Aenean lacinia bibendum nulla sed
-	consectetur. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur
-	est at lobortis.</p>
-
 	<h3 class="heading-medium">A 24px heading</h3>
-
-	<p>Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel
-	scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Maecenas
-	faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper. Donec id
-	elit non mi porta gravida at eget metus.</p>
-
 	<h4 class="heading-small">A 19px heading</h4>
 
 	<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
@@ -64,33 +47,25 @@
 
 	<ul class="list-bullet">
 		<li>Here is a bulleted list.</li>
-
 		<li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-
 		<li>Vestibulum id ligula porta felis euismod semper.</li>
-
 		<li>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
 	</ul>
 
 	<ol class="list-number">
 		<li>Here is a numbered list.</li>
-
 		<li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-
 		<li>Vestibulum id ligula porta felis euismod semper.</li>
-
 		<li>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
 	</ol>
 </div>
 
-<form action="/" method="post" class="form">
+<form name="test-form" class="form">
 	<h1 class="form-title heading-large">Your details</h1><!-- Full name -->
-
 	<div class="form-group">
 		<label class="form-label-bold" for="full-name">Full name</label>
-
 		<p class="form-hint">As shown on your birth certificate or passport</p><input type=
-		"text" class="form-control" id="full-name" />
+		"text" class="form-control" id="full-name" name="full-name" />
 	</div><!-- National Insurance number -->
 
 	<div class="form-group">
@@ -98,7 +73,7 @@
 		<span class="form-hint">It's on your National Insurance card, benefit letter,
 		payslip or P60.<br />
 		For example, 'VO 12 34 56 D'.</span></label> <input type="text" class=
-		"form-control" id="ni-number" />
+		"form-control" id="ni-number" name="ni-number" />
 	</div><!-- Date of birth -->
 
 	<div class="form-group">
