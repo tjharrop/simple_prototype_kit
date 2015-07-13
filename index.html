@@ -1,0 +1,159 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>GOV.UK</title>
+	<meta name="author" content="Tom Harrop" />
+	<meta name="Copyright" content="Open Government Licence v3.0, except where otherwise stated" />
+	<!--[if gt IE 8]><!--><link href="govuk-assets/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+	<!--[if IE 6]><link href="govuk-assets/stylesheets/govuk-template-ie6.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 7]><link href="govuk-assets/stylesheets/govuk-template-ie7.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 8]><link href="govuk-assets/stylesheets/govuk-template-ie8.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<link href="govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/application.js"></script>
+</head>
+<body>
+
+	<header data-includefile="header"></header>
+	<main id="content" role="main">
+		<div data-includefile="banner-alpha"></div>
+
+<!-- DELETE FROM HERE -->
+
+<h1 class="heading-xlarge">Typography</h1>
+
+<div class="text">
+	<h1 class="heading-xlarge"><span class="heading-secondary">A 27px section
+	heading</span> A 48px heading</h1>
+
+	<p class="lede">This is an intro paragraph at 24px. Maecenas faucibus mollis
+	interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+	Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur
+	blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper.</p>
+
+	<h2 class="heading-large">A 36px heading</h2>
+
+	<p>This is a body copy paragraph at 19px. Donec id elit non mi porta gravida at eget
+	metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+	ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+	lacinia odio sem nec elit. Donec sed odio dui. Aenean lacinia bibendum nulla sed
+	consectetur. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur
+	est at lobortis.</p>
+
+	<h3 class="heading-medium">A 24px heading</h3>
+
+	<p>Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel
+	scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Maecenas
+	faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper. Donec id
+	elit non mi porta gravida at eget metus.</p>
+
+	<h4 class="heading-small">A 19px heading</h4>
+
+	<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+	fermentum massa justo sit amet risus. Donec sed odio dui. Donec id elit non mi porta
+	gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam
+	quis risus eget urna mollis ornare vel eu leo.</p>
+
+	<ul class="list-bullet">
+		<li>Here is a bulleted list.</li>
+
+		<li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
+
+		<li>Vestibulum id ligula porta felis euismod semper.</li>
+
+		<li>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+	</ul>
+
+	<ol class="list-number">
+		<li>Here is a numbered list.</li>
+
+		<li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
+
+		<li>Vestibulum id ligula porta felis euismod semper.</li>
+
+		<li>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+	</ol>
+</div>
+
+<form action="/" method="post" class="form">
+	<h1 class="form-title heading-large">Your details</h1><!-- Full name -->
+
+	<div class="form-group">
+		<label class="form-label-bold" for="full-name">Full name</label>
+
+		<p class="form-hint">As shown on your birth certificate or passport</p><input type=
+		"text" class="form-control" id="full-name" />
+	</div><!-- National Insurance number -->
+
+	<div class="form-group">
+		<label class="form-label-bold" for="ni-number">National Insurance number
+		<span class="form-hint">It's on your National Insurance card, benefit letter,
+		payslip or P60.<br />
+		For example, 'VO 12 34 56 D'.</span></label> <input type="text" class=
+		"form-control" id="ni-number" />
+	</div><!-- Date of birth -->
+
+	<div class="form-group">
+		<fieldset>
+			<legend class="form-label-bold">Date of birth</legend>
+
+			<div class="form-date">
+				<p class="form-hint">For example, 31 3 1980</p>
+
+				<div class="form-group form-group-day">
+					<label for="dob-day">Day</label> <input class="form-control" id="dob-day"
+					type="number" pattern="[0-9]*" min="0" max="31" />
+				</div>
+
+				<div class="form-group form-group-month">
+					<label for="dob-month">Month</label> <input class="form-control" id=
+					"dob-month" type="number" pattern="[0-9]*" min="0" max="12" />
+				</div>
+
+				<div class="form-group form-group-year">
+					<label for="dob-year">Year</label> <input class="form-control" id="dob-year"
+					type="number" pattern="[0-9]*" min="0" max="2014" />
+				</div>
+			</div>
+		</fieldset>
+	</div>
+
+	<div class="form-group">
+		<span class="summary">Help with date of birth</span>
+
+		<div class="panel-indent" id="details-content-0" aria-hidden="true" style=
+		"display: none;">
+			<p>If you don&rsquo;t know your exact date of birth, use the one you put on
+			official documents (for example, your passport or driving licence).</p>
+
+			<p>If you can&rsquo;t provide your date of birth you&rsquo;ll have to send copies
+			of identity documents through the post.</p>
+		</div>
+	</div><!-- Primary buttons, secondary links -->
+
+	<div class="form-group">
+		<input type="submit" class="button" value="Continue" />
+
+		<ul>
+			<li><a href="#">Skip this section for now</a></li>
+
+			<li><a href="#">Back</a></li>
+		</ul>
+	</div>
+</form>
+
+<!-- STOP DELETING! -->
+
+
+	</main>
+	<footer data-includefile="footer"></footer>
+</body>
+</html>
