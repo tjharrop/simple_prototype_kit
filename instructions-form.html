@@ -1,0 +1,199 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>GOV.UK</title>
+	<meta name="author" content="Tom Harrop" />
+	<meta name="Copyright" content="Open Government Licence v3.0, except where otherwise stated" />
+	<!--[if gt IE 8]><!--><link href="govuk-assets/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+	<!--[if IE 6]><link href="govuk-assets/stylesheets/govuk-template-ie6.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 7]><link href="govuk-assets/stylesheets/govuk-template-ie7.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 8]><link href="govuk-assets/stylesheets/govuk-template-ie8.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<link href="govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/form.storage.js"></script>
+	<script type="text/javascript" src="scripts/application.js"></script>
+	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
+</head>
+<body>
+
+	<header data-includefile="header"></header>
+	<main id="content" role="main">
+		<div data-includefile="banner-alpha"></div>
+
+<!-- DELETE FROM HERE -->
+
+<h1 class="heading-xlarge">Form Elements</h1>
+
+<div class="instructions">
+	<p>This prototype kit will save any information entered in to forms in the browser's local storage as long as some simple steps are followed.</p>
+</div>
+
+<div class="instructions">
+	<h2 class="bold-medium">1. The form</h2>
+	<!--<p>Local storage uses "keys" and "values". A key is an identifier for the information, the value is the infomation itself. i.e.</p>
+	<table>
+		<thead>
+			<tr>
+				<th>Key</th>
+				<th>Value</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Name</td>
+				<td>The Incredible Hulk</td>
+			</tr>
+			<tr>
+				<td>Known as</td>
+				<td>"The Hulk"</td>
+			</tr>
+			<tr>
+				<td>Ethnicity</td>
+				<td>Unknown (Green)</td>
+			</tr>
+			<tr>
+				<td>Clothes</td>
+				<td>White t-shirt (Primark), Purple shorts</td>
+			</tr>
+		</tbody>
+	</table>-->
+	<p>Your information will be stored in chunks which will need the be identified. Use the "name" attribute of your form tags to name the sections. For example, a form collecting personal information:</p>
+<pre>
+&lt;form name="<strong>personal-information</strong>"&gt;
+    &lt;!-- Your form fields will goes here --&gt;
+&lt;/form&gt;
+</pre>
+</div>
+
+
+
+<form name="personal-information" class="form">
+	<h1 class="form-title heading-large">Your details</h1><!-- Full name -->
+
+	<div class="instructions">
+		<h2 class="bold-medium">Text inputs</h2>
+		<p>Like with the form tag, we use the name attribute to give our chunks of information an identifier. We will also use the same identifier to link our labels with their corresponding fields.</p>
+		<p>The example below uses 'full-name' as the identifier for this field.</p>
+			<pre>
+&lt;label class="form-label-bold" for="<strong>full-name</strong>">Full name&lt;/label>
+&lt;p class="form-hint">As shown on your birth certificate or passport&lt;/p>
+&lt;input type="text" class="form-control" id="<strong>full-name</strong>" name="<strong>full-name</strong>" />
+</pre>
+	</div>
+
+	<div class="form-group">
+		<label class="form-label-bold" for="full-name">Full name</label>
+		<p class="form-hint">As shown on your birth certificate or passport</p>
+		<input type="text" class="form-control" id="full-name" name="full-name" />
+	</div>
+
+
+	<div class="instructions">
+		<h2 class="bold-medium">Date inputs</h2>
+		<p>There is styling ready for text fields being used for date inputs. Below is an example of a Date of Birth field, using the field names <strong>dob-day</strong>, <strong>dob-month</strong> and <strong>dob-year</strong>.</p>
+		<p>The css classes below (form-date, form-group-day, form-group-month, form-group-year) are important for styling.</p>
+		<pre>
+&lt;div class="form-group">
+  &lt;fieldset>
+    &lt;legend class="form-label-bold">Date of birth&lt;/legend>
+    &lt;div class="form-date">
+      &lt;p class="form-hint">For example, 31 3 1980&lt;/p>
+      &lt;div class="form-group form-group-day">
+        &lt;label for="<strong>dob-day</strong>">Day&lt;/label> &lt;input class="form-control" id="<strong>dob-day</strong>" type="number" pattern="[0-9]*" min="0" max="31" name="<strong>dob-day</strong>" />
+      &lt;/div>
+      &lt;div class="form-group form-group-month">
+        &lt;label for="<strong>dob-month</strong>">Month&lt;/label> &lt;input class="form-control" id="<strong>dob-month</strong>" type="number" pattern="[0-9]*" min="0" max="12" name="<strong>dob-month</strong>" />
+      &lt;/div>
+      &lt;div class="form-group form-group-year">
+        &lt;label for="<strong>dob-year</strong>">Year&lt;/label> &lt;input class="form-control" id="<strong>dob-year</strong>" type="number" pattern="[0-9]*" min="0" max="2014" name="<strong>dob-year</strong>" />
+      &lt;/div>
+    &lt;/div>
+  &lt;/fieldset>
+&lt;/div>
+</pre>
+	</div>
+
+	<div class="form-group">
+		<fieldset>
+			<legend class="form-label-bold">Date of birth</legend>
+
+			<div class="form-date">
+				<p class="form-hint">For example, 31 3 1980</p>
+
+				<div class="form-group form-group-day">
+					<label for="dob-day">Day</label> <input class="form-control" id="dob-day"
+					type="number" pattern="[0-9]*" min="0" max="31" name="dob-day" />
+				</div>
+
+				<div class="form-group form-group-month">
+					<label for="dob-month">Month</label> <input class="form-control" id=
+					"dob-month" type="number" pattern="[0-9]*" min="0" max="12" name="dob-month" />
+				</div>
+
+				<div class="form-group form-group-year">
+					<label for="dob-year">Year</label> <input class="form-control" id="dob-year"
+					type="number" pattern="[0-9]*" min="0" max="2014" name="dob-year" />
+				</div>
+			</div>
+		</fieldset>
+	</div>
+
+	<div class="instructions">
+		<h2 class="bold-medium">Contextual expandable additional spinny help thing</h2>
+		<p>Seriously, what are these called?</p>
+		<p></p>
+		<pre>
+&lt;details class="form-group">
+  &lt;summary role="button" aria-controls="details-content-0" tabindex="0" aria-expanded="false">
+    &lt;span class="summary">Help with date of birth&lt;/span>
+  &lt;/summary>
+  &lt;div class="panel-indent" id="details-content-0" aria-hidden="true" style="display: none;">
+    &lt;p>If you don&rsquo;t know your exact date of birth, use the one you put on official documents (for example, your passport or driving licence).&lt;/p>
+    &lt;p>If you can&rsquo;t provide your date of birth you&rsquo;ll have to send copies of identity documents through the post.&lt;/p>
+  &lt;/div>
+&lt;/details>
+</pre>
+	</div>
+
+	<details class="form-group">
+		<summary role="button" aria-controls="details-content-0" tabindex="0" aria-expanded="false">
+			<span class="summary">Help with date of birth</span>
+		</summary>
+
+		<div class="panel-indent" id="details-content-0" aria-hidden="true" style="display: none;">
+			<p>If you don&rsquo;t know your exact date of birth, use the one you put on
+			official documents (for example, your passport or driving licence).</p>
+
+			<p>If you can&rsquo;t provide your date of birth you&rsquo;ll have to send copies
+			of identity documents through the post.</p>
+		</div>
+	</details>
+
+	<div class="form-group">
+		<a class="button" href="instructions-toggle.html">Continue</a>
+
+		<ul>
+			<li><a href="#">Skip this section for now</a></li>
+
+			<li><a href="#">Back</a></li>
+		</ul>
+	</div>
+</form>
+
+<!-- STOP DELETING! -->
+
+
+	</main>
+	<footer data-includefile="footer"></footer>
+</body>
+</html>

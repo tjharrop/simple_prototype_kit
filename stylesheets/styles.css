@@ -15,3 +15,4 @@ pre {
 	font-family: courier;
 	overflow: scroll;
 }
+*[class^='optional-section-'],*[class*=' optional-section-'] {display: none;}

@@ -1,0 +1,71 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>GOV.UK</title>
+	<meta name="author" content="Tom Harrop" />
+	<meta name="Copyright" content="Open Government Licence v3.0, except where otherwise stated" />
+	<!--[if gt IE 8]><!--><link href="govuk-assets/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+	<!--[if IE 6]><link href="govuk-assets/stylesheets/govuk-template-ie6.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 7]><link href="govuk-assets/stylesheets/govuk-template-ie7.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 8]><link href="govuk-assets/stylesheets/govuk-template-ie8.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<link href="govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/form.storage.js"></script>
+	<script type="text/javascript" src="scripts/application.js"></script>
+	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
+</head>
+<body>
+
+	<header data-includefile="header"></header>
+	<main id="content" role="main">
+		<div data-includefile="banner-alpha"></div>
+
+<!-- DELETE FROM HERE -->
+
+<h1 class="heading-xlarge">Change button from radio selection</h1>
+<div class="instructions">
+	<p>If you want to send the user to a different place based on a radio button you can do so by using 2 data attributes, "data-button-page" and "data-button-id" to say which page should be redirected to and which button should send the user there respectively. </p>
+	<p>For example, to redirect a user to "summary.html" when they select a checkbox with a label of "Summary" you can use the following:
+	<pre>
+&lt;label class="block-label" for="onward-1">
+  &lt;input id="onward-1" name="onwardPage" value="summary" type="radio" data-button-page="summary.html" data-button-id="#continuebutton" checked="checked">
+  Summary
+&lt;/label>
+</pre>
+<p>This looks for, when changed, a button with the ID "continuebutton" and changes it's href (where it goes when clicked) to "summary.html".</p>
+<pre>
+&lt;a href="default.html" class="button" id="continuebutton">Continue&lt;/a>
+</pre>
+<p>If the radio button hadn't been changed, it'd still go to default.html instead.</p>
+</div>
+<div class="form-group">
+<label class="block-label" for="onward-1">
+  <input id="onward-1" name="onwardPage" value="summary" type="radio" data-button-page="instructions-summary.html" data-button-id="#continuebutton" checked="checked">
+  Summary
+</label>
+
+<label class="block-label" for="onward-2">
+  <input id="onward-2" name="onwardPage" value="start" type="radio" data-button-page="index.html" data-button-id="#continuebutton">
+  Back to start
+</label>
+</div>
+
+<a href="instructions-summary.html" class="button" id="continuebutton">Continue</a>
+
+<!-- STOP DELETING! -->
+
+
+	</main>
+	<footer data-includefile="footer"></footer>
+</body>
+</html>

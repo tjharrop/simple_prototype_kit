@@ -1,0 +1,80 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>GOV.UK</title>
+	<meta name="author" content="Tom Harrop" />
+	<meta name="Copyright" content="Open Government Licence v3.0, except where otherwise stated" />
+	<!--[if gt IE 8]><!--><link href="govuk-assets/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+	<!--[if IE 6]><link href="govuk-assets/stylesheets/govuk-template-ie6.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 7]><link href="govuk-assets/stylesheets/govuk-template-ie7.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 8]><link href="govuk-assets/stylesheets/govuk-template-ie8.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<link href="govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/form.storage.js"></script>
+	<script type="text/javascript" src="scripts/application.js"></script>
+	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
+</head>
+<body>
+
+	<header data-includefile="header"></header>
+	<main id="content" role="main">
+		<div data-includefile="banner-alpha"></div>
+
+<!-- DELETE FROM HERE -->
+
+<h1 class="heading-xlarge">Toggle content with radio</h1>
+<div class="instructions">
+	<p>If you'd like to toggle a content area based on which radio button or checkbox is selected, you can do so by giving the stuff you want to hide a class of "optional-section-(radio name)" and a attribute "data-toggle-value" of the radio or checkbox's value.</p>
+	<p>So, if you have a checkbox with a name of "travel-how" and a cheked value of "car" it would look like this:</p>
+	<pre>
+&lt;label class="block-label selectable" for="radio-1">
+  &lt;input class="selectable" id="radio-1" type="radio" name="travel-how" value="car" data-storage="Car">
+  Car
+&lt;/label>
+</pre>
+	<p>If you now wanted to show a div when this radio button was checked, it would look something like this:</p>
+<pre>
+&lt;div class="optional-section-travel-how" data-toggle-value="car">
+  &lt;p>You have selected car!&lt;/p>
+&lt;/div>
+</pre>
+</div>
+
+<p>How did you travel to work today?</p>
+<form name="test-form">
+	<div class="form-group">
+     <label class="block-label selectable" for="radio-1">
+       <input class="selectable" id="radio-1" type="radio" name="travel-how" value="car" data-storage="Car">
+        Car
+      </label>
+      <div class="optional-section-travel-how form-group" data-toggle-value="car">
+        <p>You have selected car! </p>
+      </div>
+      <label class="block-label selectable" for="radio-2">
+        <input id="radio-2" type="radio" name="travel-how" value="unicycle" data-storage="Unicycle">
+        Unicycle
+      </label>
+      <div class="optional-section-travel-how form-group" data-toggle-value="unicycle">
+        <p>You have selected unicycle!</p>
+      </div>
+    </div>
+	</form>
+<a href="instructions-changebutton.html" class="button">Continue</a>
+
+<!-- STOP DELETING! -->
+
+
+	</main>
+	<footer data-includefile="footer"></footer>
+</body>
+</html>
