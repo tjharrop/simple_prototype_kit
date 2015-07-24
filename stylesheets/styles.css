@@ -9,7 +9,7 @@
 	clear: both;
 }
 .instructions p, .instructions th, .instructions td, .instructions table, .instructions h2 {
-	color: #990000
+	color: #990000;
 }
 pre {
 	font-family: courier;
